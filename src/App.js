@@ -36,10 +36,10 @@ function App() {
       return [expense, ...prevState];
     });
   };
-
+  
   return (
     <div>
-      <NewExpense addExpense={addExpenseHandler} />
+      <NewExpense addExpense={addExpenseHandler} />}
       <Expenses items={expenses} />
     </div>
   );
