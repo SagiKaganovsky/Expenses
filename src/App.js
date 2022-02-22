@@ -1,7 +1,8 @@
+import { useState } from 'react';
 import Expenses from './components/Expenses/Expenses';
 import NewExpense from './components/NewExpense/NewExpense';
 import './App.css';
-import { useState } from 'react';
+import ExpensesChart from './components/Expenses/ExpensesChart';
 const DUMMY_EXPENSES = [
   {
     id: 'e1',
@@ -36,10 +37,10 @@ function App() {
       return [expense, ...prevState];
     });
   };
-  
+
   return (
     <div>
-      <NewExpense addExpense={addExpenseHandler} />}
+      <NewExpense addExpense={addExpenseHandler} />
       <Expenses items={expenses} />
     </div>
   );
